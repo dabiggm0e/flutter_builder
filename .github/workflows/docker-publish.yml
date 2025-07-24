@@ -1,3 +1,4 @@
+
 name: Build and push Docker image
 
 on:
@@ -26,5 +27,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./Dockerfile  # Specify the Dockerfile path if it's not in root
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flutter-ndk:latest          
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flutter-ndk:latest
