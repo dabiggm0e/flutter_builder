@@ -26,6 +26,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flutter-ndk:latest
-          file: builder/Dockerfile         # Path to Dockerfile relative to repo root
-          context: builder                # Build context directory
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flutter-ndk:latest          
